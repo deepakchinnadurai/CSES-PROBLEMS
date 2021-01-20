@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#include<vector>
+using namespace std;
+int main(){
+int long long t;
+cin.tie(NULL);cin >> t; int long long  a[t],b[t];
+for(int i=1;i<=t;i++){cin >> a[i]; b[i]=a[i];}
+sort(b,b+t+1);
+int long long  j=1; vector<int> v;
+while(j<=b[t]){
+    v.push_back(j);
+    j++;
+
+}
+stringstream ss;
+copy(v.begin(),v.end(),ostream_iterator<int>(ss,""));
+string s = ss.str();
+s=  s.substr(0,s.length()-1);
+for(int z=1;z<=t;z++){
+    cout << s[a[z]-1] << endl;
+}
+}
